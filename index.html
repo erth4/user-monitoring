@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="/favicon.ico">
     <meta name="author" content="Ertha Dwi Setiyawan">
+    <meta name="theme-color" content="#FFFFFF">
     <title>User Online</title>
     <script>
       // Tema diterapkan sebelum render pertama agar halaman tidak berkedip terang lalu gelap.
@@ -13,6 +14,8 @@
         try { saved = localStorage.getItem('uo-theme'); } catch (e) { saved = null; }
         var dark = saved ? saved === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
         document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+        // Warna bilah browser mengikuti --color-surface (warna header).
+        document.querySelector('meta[name="theme-color"]').setAttribute('content', dark ? '#0A0A0A' : '#FFFFFF');
       })();
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,8 +24,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
         integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script type="module" crossorigin src="/assets/index-BA_X6sH6.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-DrR1TO0R.css">
+    <script type="module" crossorigin src="/assets/index-BxZUuswZ.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CAJu7ePf.css">
   <link rel="manifest" href="/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/registerSW.js"></script></head>
   <body class="min-h-screen antialiased">
     <div id="app"></div>
